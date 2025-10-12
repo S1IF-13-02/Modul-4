@@ -3,12 +3,11 @@ package main
 import "fmt"
 
 func main() {
-	var bilangan, d1, d2, d3 int
-	fmt.Print("Masukkan bilangan tiga digit: ")
-	fmt.Scan(&bilangan)
-	d1 = bilangan / 100
-	d2 = bilangan % 100 / 10
-	d3 = bilangan % 100 % 10
-	fmt.Println(d1 <= d2 && d2 <= d3)
+	var detik, jam, menit int
+	fmt.Print("Masukkan detik: ")
+	fmt.Scan(&detik)
+	jam = detik / 3600
+	menit = (detik % 3600) / 60
+	detik = detik % 60
+	fmt.Println(jam, "jam", menit, "menit", detik, "detik")
 }
-
